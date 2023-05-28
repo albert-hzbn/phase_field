@@ -127,11 +127,6 @@ void CH2D::performCalculation()
         time = iter * delta_t;
         if (std::fmod(time, time_interval) == 0)
         {
-            // naming output file
-            // std::string temp_str = "output_" + std::to_string(time) + ".vti";
-            // save_filename = new char[temp_str.length() + 1];
-            // strcpy(save_filename, temp_str.c_str());
-
             save_comp.fftwComplexToFile(comp, dims, time, output_format);
         }
 
